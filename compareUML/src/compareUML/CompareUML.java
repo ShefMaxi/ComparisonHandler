@@ -9,4 +9,4 @@ public class CompareUML {
 		System.out.println("I created a new class");
 	}
 
-}
+}//hahahaha
