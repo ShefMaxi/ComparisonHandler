@@ -1,17 +1,15 @@
 package compareUML;
 
-public class AssociationElement {
-
+public class AssociationElement extends PackagedElement{
+	protected String firstMemberEnd;
+	protected String secondMemberEnd;
 	public AssociationElement(String id, String firstMember, String secondMember) {
-		// TODO Auto-generated constructor stub
-		this.id = id;
+		// TODO Auto-generated constructor stub\
+		super("Association", id);
 		this.firstMemberEnd = firstMember;
 		this.secondMemberEnd = secondMember;
 	}
-	//private String type;//private String name;
-	private String id;
-	private String firstMemberEnd;
-	private String secondMemberEnd;
+
 	
 	public String getFirstMemberEnd() {
 		return firstMemberEnd;
@@ -19,10 +17,6 @@ public class AssociationElement {
 	
 	public String getSecondMemberEnd() {
 		return secondMemberEnd;
-	}
-	
-	public String getId() {
-		return id;
 	}
 	
 }
