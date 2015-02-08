@@ -12,5 +12,10 @@ public class UMLElement extends PackagedElement {
 	public String getName() {
 		return name;
 	}
-
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + "name : " + name;
+	}
 }

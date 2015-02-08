@@ -16,8 +16,9 @@ public abstract class PackagedElement {
 		return id;
 	}
 	
-	public PackagedElement() {
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "type : " + type + " id : " + id;
 	}
-
 }
