@@ -8,5 +8,5 @@ public class CompareUML {
 	public static void main(String[] args) {
 		System.out.println("I created a new class");
 	}
-
+// comment out
 }//hahahaha
