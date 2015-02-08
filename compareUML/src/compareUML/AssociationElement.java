@@ -22,7 +22,7 @@ public class AssociationElement extends PackagedElement{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString() + "1st M : " + firstMemberEnd
-				+ "2nd M" + secondMemberEnd;
+		return super.toString() + " 1st M : " + firstMemberEnd
+				+ " 2nd M : " + secondMemberEnd;
 	}
 }
