@@ -33,6 +33,7 @@ public class LecturerExample {
 		for (int i = 0; i < result.size(); i++) {
 			System.out.println(result.get(i));
 		}
+		ElementsPreprocessor preprocessor = new ElementsPreprocessor(result);
 	}
 
 }
