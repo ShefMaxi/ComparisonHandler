@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_FLxX4LB0EeSqAvaUzo-knA" name="project7">
+  <eAnnotations xmi:id="_FLxX4bB0EeSqAvaUzo-knA" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_FLxX4rB0EeSqAvaUzo-knA" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_FLxX47B0EeSqAvaUzo-knA" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_FLxX5LB0EeSqAvaUzo-knA" name="Activity">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_FLxX5bB0EeSqAvaUzo-knA" name="locals"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_FLxX5rB0EeSqAvaUzo-knA" name="Action">
+      <body></body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_FLxX57B0EeSqAvaUzo-knA" name="Action1">
+      <body></body>
+    </node>
+  </packagedElement>
+</uml:Model>
