@@ -7,52 +7,52 @@ import java.util.ArrayList;
  * xmi parser
  */
 public class ElementsPreprocessor {
-	
-	//private String[] DIAGRAMTYPE = {"usecase", "class", ""};
-	
-	
+
+	// private String[] DIAGRAMTYPE = {"usecase", "class", ""};
+
 	protected String diagramType;
 	protected ArrayList<PackagedElement> diagramElements;
-	
+
 	public ElementsPreprocessor(ArrayList<PackagedElement> elements) {
 		// TODO Auto-generated constructor stub
 		this.diagramElements = elements;
 		identifyDiagramType();
 	}
-	
+
 	private boolean identifyDiagramType() {
 		for (PackagedElement packagedElement : diagramElements) {
-				if (packagedElement.getType().compareToIgnoreCase("Actor") == 0) {
-					this.diagramType = "UseCase";
-					System.out.println(this.diagramType);
-					break;
-				}
-				else if (packagedElement.getType().compareToIgnoreCase("Class") == 0) {
-					this.diagramType = "Class";
-					System.out.println(this.diagramType);
-					break;
-				}
-				else if (packagedElement.getType().compareToIgnoreCase("OpaqueAction") == 0) {
-					this.diagramType = "Activity";
-					System.out.println(this.diagramType);
-					break;
-				}
-				else if (packagedElement.getType().compareToIgnoreCase("Class") == 0) {
-					this.diagramType = "Class";
-					System.out.println(this.diagramType);
-					break;
-				}
-				
-				
+			if (packagedElement.getType().compareToIgnoreCase("Actor") == 0) {
+				this.diagramType = "UseCase";
+				System.out.println(this.diagramType);
+				return true;
+			} else if (packagedElement.getType().compareToIgnoreCase("Class") == 0) {
+				this.diagramType = "Class";
+				System.out.println(this.diagramType);
+				return true;
+			} else if (packagedElement.getType().compareToIgnoreCase(
+					"OpaqueAction") == 0) {
+				this.diagramType = "Activity";
+				System.out.println(this.diagramType);
+				return true;
+			} else if (packagedElement.getType().compareToIgnoreCase("State") == 0) {
+				// need to re-check
+				this.diagramType = "StateMachine";
+				System.out.println(this.diagramType);
+				return true;
+			}
 		}
-		return true;
+		return false;
 	}
+
+	
+	
+	
 	
 	// accessors
 	public String getDiagramType() {
 		return diagramType;
 	}
-	
+
 	public ArrayList<PackagedElement> rawElements() {
 		return diagramElements;
 	}
