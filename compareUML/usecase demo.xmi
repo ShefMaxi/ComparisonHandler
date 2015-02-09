@@ -5,7 +5,7 @@
       <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZzAGY6_LEeSWN-gxZbqnFw" value="3.0.0"/>
     </contents>
   </eAnnotations>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_ZzAGZK_LEeSWN-gxZbqnFw" name="Paul"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_ZzAGZK_LEeSWN-gxZbqnFw" name="Paul"></packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_ZzAGZa_LEeSWN-gxZbqnFw" memberEnd="_ZzAGZq_LEeSWN-gxZbqnFw _ZzAGaK_LEeSWN-gxZbqnFw" navigableOwnedEnd="_ZzAGZq_LEeSWN-gxZbqnFw">
     <ownedEnd xmi:id="_ZzAGZq_LEeSWN-gxZbqnFw" visibility="public" type="_ZzAGcK_LEeSWN-gxZbqnFw" association="_ZzAGZa_LEeSWN-gxZbqnFw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZzAGZ6_LEeSWN-gxZbqnFw"/>
