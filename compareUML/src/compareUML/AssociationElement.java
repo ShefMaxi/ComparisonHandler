@@ -1,7 +1,7 @@
 package compareUML;
 
 public class AssociationElement extends PackagedElement{
-	protected String firstMemberEnd;
+	protected String firstMemberEnd;	// the real id of first member
 	protected String secondMemberEnd;
 	public AssociationElement(String id, String firstMember, String secondMember) {
 		// TODO Auto-generated constructor stub\
