@@ -54,9 +54,9 @@ public class ElementsPreprocessor {
 		return false;
 	}
 
-	protected boolean preprocessForUseCase() {
+	protected HashMap<String, ArrayList<PackagedElement>> preprocessForUseCase() {
+		HashMap<String, ArrayList<PackagedElement>> result = new HashMap<String, ArrayList<PackagedElement>>();
 		if (this.diagramType.compareToIgnoreCase("usecase") == 0) {
-			HashMap<String, ArrayList<PackagedElement>> result = new HashMap<String, ArrayList<PackagedElement>>();
 			// can be optimized.
 			for (String usecaseElement : USECASE_ELEMENT) {
 				ArrayList<PackagedElement> processedElement = new ArrayList<PackagedElement>();
@@ -71,7 +71,7 @@ public class ElementsPreprocessor {
 				result.put(usecaseElement, processedElement);
 			}
 		}
-		return false;
+		return result;
 	}
 
 }
