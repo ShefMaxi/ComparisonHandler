@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class ElementsPreprocessor {
 
 	// private String[] DIAGRAMTYPE = {"usecase", "class", ""};
-	protected String[] USECASE_ELEMENT = { "Actor", "Usecase", "Association" };
+	protected String[] USECASE_ELEMENT_TYPE = { "Actor", "Usecase", "Association" };
 	protected String diagramType;
 	protected ArrayList<PackagedElement> diagramElements;
 
@@ -54,21 +54,23 @@ public class ElementsPreprocessor {
 		return false;
 	}
 
-	protected HashMap<String, ArrayList<PackagedElement>> preprocessForUseCase() {
+	public HashMap<String, ArrayList<PackagedElement>> preprocessForUseCase() {
 		HashMap<String, ArrayList<PackagedElement>> result = new HashMap<String, ArrayList<PackagedElement>>();
 		if (this.diagramType.compareToIgnoreCase("usecase") == 0) {
 			// can be optimized.
-			for (String usecaseElement : USECASE_ELEMENT) {
+			
+			for (String usecaseElementType : USECASE_ELEMENT_TYPE) {
+				
 				ArrayList<PackagedElement> processedElement = new ArrayList<PackagedElement>();
 
 				for (PackagedElement packagedElement : diagramElements) {
 					if (packagedElement.getType().compareToIgnoreCase(
-							usecaseElement) == 0) {
+							usecaseElementType) == 0) {
 						processedElement.add(packagedElement);
 					}
 				}
 
-				result.put(usecaseElement, processedElement);
+				result.put(usecaseElementType, processedElement);
 			}
 		}
 		return result;
