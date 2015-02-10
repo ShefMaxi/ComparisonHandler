@@ -1,6 +1,8 @@
 package compareUML;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Set;
 
 public class LecturerExample {
 	protected ArrayList<PackagedElement> umlElements;
@@ -30,10 +32,12 @@ public class LecturerExample {
 		// TODO Auto-generated method stub
 		LecturerExample lectureDiagram = new LecturerExample();
 		ArrayList<PackagedElement> result = lectureDiagram.getUmlElements();
-		for (int i = 0; i < result.size(); i++) {
-			System.out.println(result.get(i));
-		}
+
+		System.out.println("=================================");
 		ElementsPreprocessor preprocessor = new ElementsPreprocessor(result);
+		HashMap<String, ArrayList<PackagedElement>> myMap = preprocessor.preprocessForUseCase();
+		Set<String> myKeys = myMap.keySet();
+		System.out.println(myKeys);
 	}
 
 }

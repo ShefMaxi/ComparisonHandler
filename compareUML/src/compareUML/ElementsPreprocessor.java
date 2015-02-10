@@ -33,21 +33,17 @@ public class ElementsPreprocessor {
 		for (PackagedElement packagedElement : diagramElements) {
 			if (packagedElement.getType().compareToIgnoreCase("Actor") == 0) {
 				this.diagramType = "UseCase";
-				System.out.println(this.diagramType);
 				return true;
 			} else if (packagedElement.getType().compareToIgnoreCase("Class") == 0) {
 				this.diagramType = "Class";
-				System.out.println(this.diagramType);
 				return true;
 			} else if (packagedElement.getType().compareToIgnoreCase(
 					"OpaqueAction") == 0) {
 				this.diagramType = "Activity";
-				System.out.println(this.diagramType);
 				return true;
 			} else if (packagedElement.getType().compareToIgnoreCase("State") == 0) {
 				// need to re-check
 				this.diagramType = "StateMachine";
-				System.out.println(this.diagramType);
 				return true;
 			}
 		}
