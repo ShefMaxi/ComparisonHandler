@@ -40,6 +40,7 @@ public class LecturerExample {
 		String[] keys = new String[myKeys.size()];
 		myKeys.toArray(keys);
 		ArrayList<PackagedElement> myElements = myMap.get(keys[0]);
+		String x=myElements.get(0).getType();
 		System.out.println(myElements);
 		System.out.println(myKeys);
 	}
