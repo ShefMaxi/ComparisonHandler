@@ -7,7 +7,7 @@ public class CompareUML {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("nothing+123");
+		System.out.println("nothing");
 	}
 // comment out
 }
