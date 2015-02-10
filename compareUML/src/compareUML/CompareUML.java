@@ -8,7 +8,7 @@ public class CompareUML {
 
 	public static void main(String[] args) {
 		System.out.println("nothing");
-		System.out.println("Run in Shupen's");
+		System.out.println("Shupen's");
 	}
 // comment out
 }
