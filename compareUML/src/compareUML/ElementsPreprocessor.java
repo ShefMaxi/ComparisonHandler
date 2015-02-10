@@ -53,7 +53,7 @@ public class ElementsPreprocessor {
 		return diagramType;
 	}
 
-	public ArrayList<PackagedElement> rawElements() {
+	public ArrayList<PackagedElement> getRawElements() {
 		return diagramElements;
 	}
 }
