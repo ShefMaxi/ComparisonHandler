@@ -1,6 +1,7 @@
 package compareUML;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /*
  * This class is to preprocess the arraylist created by
@@ -9,9 +10,18 @@ import java.util.ArrayList;
 public class ElementsPreprocessor {
 
 	// private String[] DIAGRAMTYPE = {"usecase", "class", ""};
-
+	protected String[] USECASE_ELEMENT = { "Actor", "Usecase", "Association" };
 	protected String diagramType;
 	protected ArrayList<PackagedElement> diagramElements;
+
+	// accessors
+	public String getDiagramType() {
+		return diagramType;
+	}
+
+	public ArrayList<PackagedElement> getRawElements() {
+		return diagramElements;
+	}
 
 	public ElementsPreprocessor(ArrayList<PackagedElement> elements) {
 		// TODO Auto-generated constructor stub
@@ -19,7 +29,7 @@ public class ElementsPreprocessor {
 		identifyDiagramType();
 	}
 
-	private boolean identifyDiagramType() {
+	protected boolean identifyDiagramType() {
 		for (PackagedElement packagedElement : diagramElements) {
 			if (packagedElement.getType().compareToIgnoreCase("Actor") == 0) {
 				this.diagramType = "UseCase";
@@ -44,16 +54,24 @@ public class ElementsPreprocessor {
 		return false;
 	}
 
-	
-	
-	
-	
-	// accessors
-	public String getDiagramType() {
-		return diagramType;
+	protected boolean preprocessForUseCase() {
+		if (this.diagramType.compareToIgnoreCase("usecase") == 0) {
+			HashMap<String, ArrayList<PackagedElement>> result = new HashMap<String, ArrayList<PackagedElement>>();
+			// can be optimized.
+			for (String usecaseElement : USECASE_ELEMENT) {
+				ArrayList<PackagedElement> processedElement = new ArrayList<PackagedElement>();
+
+				for (PackagedElement packagedElement : diagramElements) {
+					if (packagedElement.getType().compareToIgnoreCase(
+							usecaseElement) == 0) {
+						processedElement.add(packagedElement);
+					}
+				}
+
+				result.put(usecaseElement, processedElement);
+			}
+		}
+		return false;
 	}
 
-	public ArrayList<PackagedElement> getRawElements() {
-		return diagramElements;
-	}
 }
