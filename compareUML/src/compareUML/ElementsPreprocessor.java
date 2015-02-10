@@ -61,16 +61,16 @@ public class ElementsPreprocessor {
 			
 			for (String usecaseElementType : USECASE_ELEMENT_TYPE) {
 				
-				ArrayList<PackagedElement> processedElement = new ArrayList<PackagedElement>();
+				ArrayList<PackagedElement> processedElements = new ArrayList<PackagedElement>();
 
 				for (PackagedElement packagedElement : diagramElements) {
 					if (packagedElement.getType().compareToIgnoreCase(
 							usecaseElementType) == 0) {
-						processedElement.add(packagedElement);
+						processedElements.add(packagedElement);
 					}
 				}
 
-				result.put(usecaseElementType, processedElement);
+				result.put(usecaseElementType, processedElements);
 			}
 		}
 		return result;
