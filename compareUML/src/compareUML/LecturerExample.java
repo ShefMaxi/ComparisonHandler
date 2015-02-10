@@ -37,6 +37,10 @@ public class LecturerExample {
 		ElementsPreprocessor preprocessor = new ElementsPreprocessor(result);
 		HashMap<String, ArrayList<PackagedElement>> myMap = preprocessor.preprocessForUseCase();
 		Set<String> myKeys = myMap.keySet();
+		String[] keys = new String[myKeys.size()];
+		myKeys.toArray(keys);
+		ArrayList<PackagedElement> myElements = myMap.get(keys[0]);
+		System.out.println(myElements);
 		System.out.println(myKeys);
 	}
 
