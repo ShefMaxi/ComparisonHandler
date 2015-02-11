@@ -44,7 +44,6 @@ public class compareH {
 			}
 		}
 		System.out.println(correctnumber);
-		System.out.println("chi fan");
 		// ---------------------------------------------------------------------------------------
 		
 		/*		written by Shupeng
