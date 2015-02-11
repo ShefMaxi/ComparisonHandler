@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
+import PackagedElements.AssociationElement;
+import PackagedElements.PackagedElement;
+import PackagedElements.UMLElement;
+
 //Shupeng's compare method for usecase
 public class compareH {
 	public static String[] forkeys(HashMap h) {

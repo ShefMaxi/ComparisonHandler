@@ -2,6 +2,10 @@ package compareUML;
 
 import java.util.ArrayList;
 
+import PackagedElements.AssociationElement;
+import PackagedElements.PackagedElement;
+import PackagedElements.UMLElement;
+
 public class StudentExample {
 	protected ArrayList<PackagedElement> umlElements;
 	protected String fileName;

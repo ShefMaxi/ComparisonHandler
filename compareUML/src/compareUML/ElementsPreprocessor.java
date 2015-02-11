@@ -3,6 +3,8 @@ package compareUML;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import PackagedElements.PackagedElement;
+
 /*
  * This class is to preprocess the arraylist created by
  * xmi parser

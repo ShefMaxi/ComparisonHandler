@@ -1,8 +1,13 @@
-package compareUML;
+// YAN ZHANG
 
+package compareUML;
+import PackagedElements.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
+
+import PackagedElements.ActorElement;
+import PackagedElements.PackagedElement;
 
 public class Comparison {
 
@@ -16,17 +21,17 @@ public class Comparison {
 		for (String key: set) {
 			if(key.compareToIgnoreCase("Actor")==0) {
 				for (PackagedElement pe : hm.get(key)) {
-					pe = new ActorElement(pe.type , pe.id);
+					pe = new ActorElement(pe.getType() , pe.getId());
 				}
 			}
 			else if(key.compareToIgnoreCase("Usecase")==0){
 				for (PackagedElement pe : hm.get(key)) {
-					pe = new ActorElement(pe.type , pe.id);
+					pe = new ActorElement(pe.getType() , pe.getId());
 				}
 			}
 			else if(key.compareToIgnoreCase("Association")==0){
 				for (PackagedElement pe : hm.get(key)) {
-					pe = new ActorElement(pe.type , pe.id);
+					pe = new ActorElement(pe.getType() , pe.getId());
 				}
 			} 
 		
