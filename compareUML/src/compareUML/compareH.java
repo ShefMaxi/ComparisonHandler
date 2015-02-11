@@ -8,7 +8,7 @@ import PackagedElements.AssociationElement;
 import PackagedElements.PackagedElement;
 import PackagedElements.UMLElement;
 
-//Shupeng's compare method for usecase
+//Comparison method for Usecase diagram, written by Shupeng
 public class compareH {
 	public static String[] forkeys(HashMap h) {
 		Set<String> myKeys = h.keySet();
@@ -18,7 +18,6 @@ public class compareH {
 	}
 
 	public compareH() {
-		// public static void main(String[] args) {
 		int correctnumber = 0;
 		int umlelenumber = 0;
 		int assoelenumber = 0;
@@ -41,22 +40,18 @@ public class compareH {
 			ArrayList<PackagedElement> lecturerElements = LecturerMap.get(key);
 			ArrayList<PackagedElement> studentElements = StudentMap.get(key);
 			for (PackagedElement packagedElement : lecturerElements) {
-				if (packagedElement instanceof UMLElement) { // UMLElement
-					UMLElement umlele = (UMLElement) packagedElement; // lecturer's
-																		// packagedElement
-					for (PackagedElement stdumlEle : studentElements) { // pick
-																		// student's
-																		// packagedElement
-						if (umlele.getName().compareToIgnoreCase( // pick
-																	// student's
-																	// UMLElement
+				if (packagedElement instanceof UMLElement) {           // UMLElement
+					UMLElement umlele = (UMLElement) packagedElement; // lecturer's packagedElement
+					// pick student's packagedElement
+					for (PackagedElement stdumlEle : studentElements) { 
+						if (umlele.getName().compareToIgnoreCase( // pick student's UMLElement
 								((UMLElement) stdumlEle).getName()) == 0) {
 							umlelenumber = umlelenumber + 10;
 						}
 					}
-				} else if (packagedElement instanceof AssociationElement) { // pick
-																			// student's
-																			// AssociationElement
+				} 
+				// pick student's AssociationElement
+				else if (packagedElement instanceof AssociationElement) { 
 					AssociationElement assoele = (AssociationElement) packagedElement;
 					for (PackagedElement stdassoele : studentElements) {
 						if (assoele.getFirstMemberEnd().compareToIgnoreCase(
