@@ -10,7 +10,7 @@ import PackagedElements.UMLElement;
 
 //Comparison method for Usecase diagram, written by Shupeng
 public class compareH {
-	public static String[] forkeys(HashMap h) {
+	public static String[] forkeys(HashMap<String, ArrayList<PackagedElement>> h) {
 		Set<String> myKeys = h.keySet();
 		String[] keys = new String[myKeys.size()];
 		myKeys.toArray(keys);
@@ -33,7 +33,7 @@ public class compareH {
 				.preprocessForUseCase();
 
 		// ---------------------------------------------------------------------------------------
-		String[] StudentKeys = forkeys(StudentMap);
+		String[] StudentKeys = forkeys(StudentMap);		// warning
 		String[] LecturerKeys = forkeys(LecturerMap);
 
 		for (String key : LecturerKeys) {

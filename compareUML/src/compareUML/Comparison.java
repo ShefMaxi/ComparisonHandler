@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
-import PackagedElements.ActorElement;
-import PackagedElements.PackagedElement;
 
 public class Comparison {
 
