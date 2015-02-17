@@ -2,9 +2,9 @@ package compareUML;
 
 import java.util.ArrayList;
 
-import PackagedElements.AssociationElement;
 import PackagedElements.PackagedElement;
-import PackagedElements.UMLElement;
+import UseCaseElements.AssociationElement;
+import UseCaseElements.UMLElement;
 
 public class StudentExample {
 	protected ArrayList<PackagedElement> umlElements;

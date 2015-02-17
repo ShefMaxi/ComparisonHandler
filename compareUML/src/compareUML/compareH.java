@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 
-import PackagedElements.AssociationElement;
 import PackagedElements.PackagedElement;
-import PackagedElements.UMLElement;
+import UseCaseElements.AssociationElement;
+import UseCaseElements.UMLElement;
 
 //Comparison method for Usecase diagram, written by Shupeng
 public class compareH {

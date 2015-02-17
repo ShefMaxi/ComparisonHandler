@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-import PackagedElements.AssociationElement;
 import PackagedElements.PackagedElement;
-import PackagedElements.UMLElement;
+import UseCaseElements.AssociationElement;
+import UseCaseElements.UMLElement;
 
 public class LecturerExample {
 	protected ArrayList<PackagedElement> umlElements;
