@@ -6,7 +6,7 @@ import java.util.Set;
 
 import PackagedElements.PackagedElement;
 import UseCaseElements.AssociationElement;
-import UseCaseElements.UMLElement;
+import UseCaseElements.GeneralizableElement;
 
 public class LecturerExample {
 	protected ArrayList<PackagedElement> umlElements;
@@ -15,9 +15,9 @@ public class LecturerExample {
 		// TODO Auto-generated constructor stub
 		this.umlElements = new ArrayList<PackagedElement>();
 		fileName = "usecase demo";
-		this.umlElements.add(new UMLElement("Actor", "ertyuio", "Paul"));
-		this.umlElements.add(new UMLElement("Actor", "gthyjik2", "Kyle"));
-		this.umlElements.add(new UMLElement("UseCase", "kjhgf", "This is a usecase"));
+		this.umlElements.add(new GeneralizableElement("Actor", "ertyuio", "Paul", null));
+		this.umlElements.add(new GeneralizableElement("Actor", "gthyjik2", "Kyle", null));
+		this.umlElements.add(new GeneralizableElement("UseCase", "kjhgf", "This is a usecase", null));
 		this.umlElements.add(new AssociationElement("gsfg", "ertyuio", "kjhgf"));
 		this.umlElements.add(new AssociationElement("fghdfadf", "gthyjik2", "kjhgf"));
 	}

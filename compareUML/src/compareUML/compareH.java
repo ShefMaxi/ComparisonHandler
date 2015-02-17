@@ -6,7 +6,7 @@ import java.util.Set;
 
 import PackagedElements.PackagedElement;
 import UseCaseElements.AssociationElement;
-import UseCaseElements.UMLElement;
+import UseCaseElements.GeneralizableElement;
 
 //Comparison method for Usecase diagram, written by Shupeng
 public class compareH {
@@ -40,12 +40,12 @@ public class compareH {
 			ArrayList<PackagedElement> lecturerElements = LecturerMap.get(key);
 			ArrayList<PackagedElement> studentElements = StudentMap.get(key);
 			for (PackagedElement packagedElement : lecturerElements) {
-				if (packagedElement instanceof UMLElement) {           // UMLElement
-					UMLElement umlele = (UMLElement) packagedElement; // lecturer's packagedElement
+				if (packagedElement instanceof GeneralizableElement) {           // UMLElement
+					GeneralizableElement umlele = (GeneralizableElement) packagedElement; // lecturer's packagedElement
 					// pick student's packagedElement
 					for (PackagedElement stdumlEle : studentElements) { 
 						if (umlele.getName().compareToIgnoreCase( // pick student's UMLElement
-								((UMLElement) stdumlEle).getName()) == 0) {
+								((GeneralizableElement) stdumlEle).getName()) == 0) {
 							umlelenumber = umlelenumber + 10;
 						}
 					}
