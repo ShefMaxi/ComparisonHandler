@@ -10,6 +10,7 @@ import UseCaseElements.UMLElement;
 
 //Comparison method for Usecase diagram, written by Shupeng
 public class compareH {
+	
 	public static String[] forkeys(HashMap<String, ArrayList<PackagedElement>> h) {
 		Set<String> myKeys = h.keySet();
 		String[] keys = new String[myKeys.size()];
@@ -17,6 +18,19 @@ public class compareH {
 		return keys;
 	}
 
+	public static double Result(int correctnumber, int totalnumber){
+		int a=correctnumber;
+		int b=totalnumber;
+		double correctrate=a/b;
+		return correctrate;
+	}
+	
+	public static void Output(int correctnumber, int umlelenumber, int assoelenumber, int totalnumber,int correctrate){
+		System.out.println("correct number in total is " + correctnumber+", total number is "+totalnumber+", correctrate is "+correctrate);
+		System.out.println("correct umlelement number is " + umlelenumber);
+		System.out.println("correct association number is " + assoelenumber);
+	}
+	
 	public compareH() {
 		int correctnumber = 0;
 		int umlelenumber = 0;
@@ -89,8 +103,11 @@ public class compareH {
 				correctnumber = assoelenumber + umlelenumber;
 			}
 		}
-		System.out.println("correct number in total is " + correctnumber);
+		/*System.out.println("correct number in total is " + correctnumber);
 		System.out.println("correct umlelement number is " + umlelenumber);
 		System.out.println("correct association number is " + assoelenumber);
+		*/
+		
+		
 	}
 }
